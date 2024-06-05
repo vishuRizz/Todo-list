@@ -2,11 +2,11 @@ import React from 'react'
 import Maintodo from "./Maintodo";
 
 
-function Allitems({arr}) {
+function Allitems({arr,handleButtonClick }) {
   return (
     <>
     <div className="Todo-items">
-        {arr.map((e)=> <Maintodo todoDate={e.date} todoName={e.name} />)} 
+        {arr.map((e)=> <Maintodo handleButtonClick={handleButtonClick}  todoDate={e.date} todoName={e.name} />)} 
         
         </div>
     </>

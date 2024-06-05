@@ -15,7 +15,12 @@ function App() {
     const newTodoItems = [...arr, {name: itemName , date: itemDueDate}]
     setArr(newTodoItems);
   }
-
+  
+ const handleButtonClick = (todoItemName ) =>{
+  const newtodoItems = arr.filter(item => item.name !== todoItemName)
+  setArr(newtodoItems)
+console.log(todoItemName, todoDate);
+ }
 
   return (
     <>
@@ -23,7 +28,7 @@ function App() {
         
         <Heading1/>
         <AddTodo  handleNewItem={handleNewItem}  />
-        <Allitems  arr={arr}/>
+        <Allitems handleButtonClick={handleButtonClick}  arr={arr}/>
        
       </center>
     </>
